@@ -1,0 +1,13 @@
+/* TEAM */
+  Creator: Artist Altayeb Amer
+  المبتكر: الفنان الطيب عامر
+  Site: https://qurankarem.org
+  Contact: info@qurankarem.org
+
+/* SITE */
+  Name: QuranKarem.org
+  Version: 1.0.0
+  Standards: HTML5, CSS3, JavaScript
+  Protection: ALTAYEB GUARDIAN v4.0
+
+© 2026 Artist Altayeb Amer — Sadaqah Jariyah — free to copy & redistribute for good; selling prohibited

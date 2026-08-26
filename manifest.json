@@ -1,0 +1,79 @@
+{
+  "name": "القرآن الكريم — QuranKarem.org",
+  "short_name": "QuranKareem",
+  "description": "ثلاثة أبواب — اقرأ، استمع، وتعلّم القرآن الكريم",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050c1a",
+  "theme_color": "#050c1a",
+  "orientation": "any",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": [
+    "education",
+    "lifestyle"
+  ],
+  "shortcuts": [
+    {
+      "name": "قراءة القرآن",
+      "short_name": "القراءة",
+      "url": "/read",
+      "description": "المصحف الشريف مع التفسير"
+    },
+    {
+      "name": "الاستماع للقرآن",
+      "short_name": "الاستماع",
+      "url": "/listen",
+      "description": "استمع لأعظم القرّاء"
+    },
+    {
+      "name": "تعلم القرآن",
+      "short_name": "التعليم",
+      "url": "/learn",
+      "description": "حلقة التحفيظ والتكرار"
+    },
+    {
+      "name": "الصلاة والقبلة",
+      "short_name": "الصلاة",
+      "url": "/prayer",
+      "description": "أوقات الصلاة واتجاه القبلة"
+    },
+    {
+      "name": "ركن الأطفال",
+      "short_name": "الأطفال",
+      "description": "سور قصيرة بتكرار تلقائي ونجوم للأطفال",
+      "url": "/kids",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "id": "https://qurankarem.org/"
+}

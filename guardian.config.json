@@ -1,0 +1,52 @@
+{
+  "_comment": "ALTAYEB GUARDIAN — مُطوَّع لمشروع القرآن الكريم (صدقة جارية). طبقات النسبة مفعّلة، وطبقات التقييد مُطفأة لأن إعادة النشر مُشجَّعة.",
+
+  "creator": {
+    "name_en": "Artist Altayeb Amer",
+    "name_ar": "الفنان الطيب عامر",
+    "signature": "© Artist Altayeb Amer",
+    "url": "https://qurankarem.org",
+    "contact": "info@qurankarem.org"
+  },
+
+  "project": {
+    "name": "QuranKarem.org",
+    "name_ar": "القرآن الكريم",
+    "site": "https://qurankarem.org",
+    "version": "1.0.0",
+    "year": 2026,
+    "license": "Sadaqah Jariyah — free to copy & redistribute for good; selling prohibited"
+  },
+
+  "domains": ["qurankarem.org", "localhost", "127.0.0.1"],
+
+  "layers": {
+    "identity": true,
+    "integrity": true,
+    "domain_guard": false,
+    "visible_signature": false,
+    "output_provenance": false,
+    "structured_data": true
+  },
+
+  "signature_ui": {
+    "selectors": [".footer-bottom p", "footer"],
+    "mode": "append",
+    "color": "#6b7488",
+    "text_ar": "تصميم وفكرة — {name_ar}",
+    "text_en": "Design & concept — {name_en}"
+  },
+
+  "structured_data": {
+    "type": "WebApplication",
+    "category": "EducationApplication",
+    "price": "0",
+    "currency": "USD",
+    "languages": ["ar", "en", "fr", "es", "ur", "tr"]
+  },
+
+  "provenance": {
+    "claim_user_content": false,
+    "comment": "Sadaqah Jariyah — free to share. Quran text belongs to no one; please redistribute freely and pray for its author."
+  }
+}
