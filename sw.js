@@ -6,8 +6,8 @@
 // QuranKarem Service Worker — v69
 // استراتيجية: Network-First لملفات الموقع (HTML/JS) حتى تظهر التحديثات فوراً،
 // وCache-First لمكتبات CDN والخطوط والصوت لتوفير الباندويدث والعمل بلا اتصال.
-const CACHE = 'qurankarem-v69';
-const CORE = ['/', '/index.html', '/app.js?v=69', '/manifest.json', '/guardian.js?v=1', '/icon-192.png', '/icon-512.png'];
+const CACHE = 'qurankarem-v70';
+const CORE = ['/', '/index.html', '/app.js?v=70', '/manifest.json', '/guardian.js?v=1', '/icon-192.png', '/icon-512.png'];
 
 // التثبيت — خزّن النواة ثم تولَّ التحكم فوراً
 self.addEventListener('install', (e) => {

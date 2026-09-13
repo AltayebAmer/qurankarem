@@ -726,6 +726,19 @@ footer{border-top:1px solid rgba(201,169,110,0.07);padding:34px 20px 22px;backgr
 .f-desc{font-size:.73rem;color:var(--text-dim);line-height:1.7;margin-top:5px}
 .wk-h{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-400);margin:4px 0 10px;text-align:center}
 .wk-h+.wk-grid{margin-bottom:18px}
+.wk-panel{padding:26px 22px;border-radius:var(--r-lg)}
+.wk-note{font-size:.76rem;line-height:1.95;color:var(--text-muted);text-align:center;margin:0 0 15px;max-width:46ch;margin-inline:auto}
+.wk-sep{height:1px;max-width:170px;margin:24px auto;background:linear-gradient(90deg,transparent,rgba(201,169,110,0.3),transparent)}
+.wk-grid-one{max-width:270px;margin-inline:auto}
+.wk-art{background:rgba(232,232,240,0.045);border-color:rgba(232,217,184,0.26)}
+.wk-art .wk-h{color:var(--ivory-300)}
+.wk-art .wk-card{border-color:rgba(232,217,184,0.28)}
+.wk-art .wk-card b{color:var(--ivory-200)}
+.wk-art .wk-card:hover{border-color:var(--ivory-300);background:rgba(244,234,216,0.07)}
+[data-theme="light"] .wk-art{background:rgba(90,80,110,0.05);border-color:rgba(90,80,110,0.2)}
+[data-theme="light"] .wk-art .wk-h{color:#4a4258}
+[data-theme="light"] .wk-art .wk-card b{color:#3c3450}
+
 .wk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
 .wk-card{display:flex;flex-direction:column;gap:3px;align-items:center;text-align:center;padding:15px 12px;
   border:1px solid rgba(201,169,110,0.22);border-radius:14px;text-decoration:none;transition:border-color .25s,background .25s}
@@ -739,6 +752,12 @@ footer{border-top:1px solid rgba(201,169,110,0.07);padding:34px 20px 22px;backgr
 .f-works-row a{font-size:.7rem;color:var(--text-dim);text-decoration:none;padding:6px 11px;border-radius:9px;
   border:1px solid rgba(201,169,110,0.18);transition:color .2s,border-color .2s}
 .f-works-row a:hover{color:var(--gold-500);border-color:var(--gold-500)}
+.f-works .f-col-art{color:var(--ivory-400)}
+.f-works-art a{color:rgba(232,217,184,0.6);border-color:rgba(232,217,184,0.26);background:rgba(232,232,240,0.04)}
+.f-works-art a:hover{color:var(--ivory-200);border-color:var(--ivory-300)}
+[data-theme="light"] .f-works .f-col-art{color:#4a4258}
+[data-theme="light"] .f-works-art a{color:rgba(60,52,75,0.8);border-color:rgba(90,80,110,0.22);background:rgba(90,80,110,0.05)}
+
 .f-share{display:flex;align-items:center;gap:9px;margin-top:14px;flex-wrap:wrap}
 .f-share-lbl{font-size:.72rem;color:var(--text-muted)}
 .f-sh{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.92rem;color:rgba(201,169,110,0.6);border:1px solid rgba(201,169,110,0.18);background:rgba(8,16,32,0.5);text-decoration:none;transition:all .2s;-webkit-tap-highlight-color:transparent}
@@ -1571,18 +1590,23 @@ input[type=range].tp-rng{width:100%;accent-color:var(--gold-500);cursor:pointer;
   <div class="page" id="pg-works">
     <div class="container" style="max-width:760px">
       <div style="text-align:center;margin-bottom:22px"><div class="eyebrow" data-i18n="nav_works">مشاريع أخرى</div><div class="sec-title" data-i18n="works_title">من تصميم الطيب عامر</div><div class="sec-sub" data-i18n="works_sub">مشاريع رقمية مجانية — وغيرها قادم</div></div>
-      <div class="float-xl" style="padding:28px">
-        <h4 class="wk-h">مشاريع مجانية</h4>
+      <div class="wk-panel wk-free float-xl">
+        <h4 class="wk-h" data-i18n="works_free_h">مشاريع مجانية</h4>
+        <p class="wk-note" data-i18n="works_note">كل مشروع صُمِّم ليكون مجانياً ونافعاً. شاركه مع من ينتفع به.</p>
         <div class="wk-grid">
           <a class="wk-card" href="https://007.gallery" target="_blank" rel="noopener noreferrer"><b>007.gallery</b><span class="wk-ar">أدوات الصور</span><span class="wk-en">Image tools</span></a>
           <a class="wk-card" href="https://awraqna.com" target="_blank" rel="noopener noreferrer"><b>أوراقنا</b><span class="wk-ar">أوراق عمل للطباعة</span><span class="wk-en">Printable worksheets</span></a>
           <a class="wk-card" href="https://mawlidi.com" target="_blank" rel="noopener noreferrer"><b>مَوْلِدي</b><span class="wk-ar">الميلاد القمري</span><span class="wk-en">Lunar birthdays</span></a>
         </div>
-        <h4 class="wk-h">المعرض الفني</h4>
-        <div class="wk-grid">
+      </div>
+
+      <div class="wk-sep" aria-hidden="true"></div>
+
+      <div class="wk-panel wk-art float-xl">
+        <h4 class="wk-h" data-i18n="works_art_h">المعرض الفني</h4>
+        <div class="wk-grid wk-grid-one">
           <a class="wk-card" href="https://altayebamer.com" target="_blank" rel="noopener noreferrer"><b>الفنان الطيب عامر</b><span class="wk-ar">أعمال بصرية · دبي</span><span class="wk-en">Visual art · Dubai</span></a>
         </div>
-        <p class="ct-note" style="margin-top:18px" data-i18n="works_note">كل مشروع صُمِّم ليكون مجانياً ونافعاً. شاركه مع من ينتفع به.</p>
       </div>
     </div>
   </div>
@@ -1776,14 +1800,14 @@ input[type=range].tp-rng{width:100%;accent-color:var(--gold-500);cursor:pointer;
       <div class="f-desc"><span data-i18n="footer_desc1">وجهتك الإسلامية الشاملة للقرآن</span><br><span data-i18n="footer_desc2">قراءةً واستماعاً وتعلماً</span></div>
       <div class="f-desc" style="margin-top:8px"><i class="fas fa-feather-pointed" style="color:var(--gold-500)"></i> <span data-i18n="designer">تصميم وفكرة</span>: <a class="creator-link" href="https://altayebamer.com/" target="_blank" rel="noopener noreferrer">الفنان الطيب عامر</a></div>
       <div class="f-works">
-        <div class="f-col-t">مشاريع مجانية</div>
+        <div class="f-col-t" data-i18n="works_free_h">مشاريع مجانية</div>
         <div class="f-works-row">
           <a href="https://007.gallery" target="_blank" rel="noopener noreferrer">007.gallery</a>
           <a href="https://awraqna.com" target="_blank" rel="noopener noreferrer">أوراقنا</a>
           <a href="https://mawlidi.com" target="_blank" rel="noopener noreferrer">مَوْلِدي</a>
         </div>
-        <div class="f-col-t" style="margin-top:12px">المعرض الفني</div>
-        <div class="f-works-row">
+        <div class="f-col-t f-col-art" style="margin-top:14px" data-i18n="works_art_h">المعرض الفني</div>
+        <div class="f-works-row f-works-art">
           <a href="https://altayebamer.com" target="_blank" rel="noopener noreferrer">الفنان الطيب عامر</a>
         </div>
       </div>
@@ -1807,6 +1831,6 @@ input[type=range].tp-rng{width:100%;accent-color:var(--gold-500);cursor:pointer;
   </div>
 </footer>
 
-<script src="/app.js?v=69"></script>
+<script src="/app.js?v=70"></script>
 </body>
 </html>
