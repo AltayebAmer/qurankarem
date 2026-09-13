@@ -111,7 +111,7 @@ var T = {
   contact_name:"الاسم",
   contact_msg:"رسالتك",
   contact_send:"إرسال",
-  contact_note:"سيفتح تطبيق بريدك برسالة جاهزة للإرسال.",
+  contact_note:"تُرسل رسالتك من هنا مباشرةً — لا يُفتح أي تطبيق بريد.",contact_mail:"بريدك الإلكتروني",contact_bad_mail:"تحقّق من بريدك الإلكتروني",contact_short:"الرسالة قصيرة جداً — اكتب عشرة أحرف على الأقل",contact_sending:"جارٍ الإرسال…",contact_ok:"وصلت رسالتك — بارك الله فيك",contact_fail:"تعذّر الإرسال، أعد المحاولة",
   contact_empty:"اكتب رسالتك أولاً",
   designer:"تصميم وفكرة",
   license_title:"الملكية الفكرية",
@@ -260,7 +260,7 @@ var T = {
   contact_name:"Name",
   contact_msg:"Your message",
   contact_send:"Send",
-  contact_note:"Your mail app will open with a ready message.",
+  contact_note:"Your message is sent from here — no mail app opens.",contact_mail:"Your email",contact_bad_mail:"Please check your email address",contact_short:"That message is too short — at least ten characters",contact_sending:"Sending…",contact_ok:"Your message arrived — thank you",contact_fail:"Sending failed, please try again",
   contact_empty:"Write your message first",
   designer:"Design & concept",
   license_title:"Intellectual Property",
@@ -409,7 +409,7 @@ var T = {
   contact_name:"Nom",
   contact_msg:"Votre message",
   contact_send:"Envoyer",
-  contact_note:"Votre messagerie s’ouvrira avec un message prêt.",
+  contact_note:"Votre message part d’ici — aucune messagerie ne s’ouvre.",contact_mail:"Votre e-mail",contact_bad_mail:"Vérifiez votre adresse e-mail",contact_short:"Message trop court — au moins dix caractères",contact_sending:"Envoi…",contact_ok:"Votre message est arrivé — merci",contact_fail:"Échec de l’envoi, réessayez",
   contact_empty:"Écrivez d’abord votre message",
   designer:"Conception & idée",
   license_title:"Propriété intellectuelle",
@@ -558,7 +558,7 @@ var T = {
   contact_name:"Nombre",
   contact_msg:"Tu mensaje",
   contact_send:"Enviar",
-  contact_note:"Tu aplicación de correo se abrirá con un mensaje listo.",
+  contact_note:"Tu mensaje se envía desde aquí — no se abre ninguna aplicación.",contact_mail:"Tu correo",contact_bad_mail:"Revisa tu dirección de correo",contact_short:"El mensaje es muy corto — al menos diez caracteres",contact_sending:"Enviando…",contact_ok:"Tu mensaje llegó — gracias",contact_fail:"No se pudo enviar, inténtalo de nuevo",
   contact_empty:"Escribe tu mensaje primero",
   designer:"Diseño e idea",
   license_title:"Propiedad intelectual",
@@ -1901,13 +1901,30 @@ function applyTranslationStyle(){
   rb.classList.toggle('tr-nastaliq',/^(ur|fa)\./.test(tr));
 }
 // ===== تواصل معنا (يفتح بريد المستخدم — بلا backend) =====
+var _ctLoaded=Date.now();
 function sendContact(){
+  var mail=((document.getElementById('ct-mail')||{}).value||'').trim();
   var name=(document.getElementById('ct-name').value||'').trim();
   var msg=(document.getElementById('ct-msg').value||'').trim();
+  var btn=document.querySelector('#pg-contact .qibla-btn');
+  var RE=/^[^\s@,;:<>()\[\]\\]+@[^\s@.,;:<>()\[\]\\]+\.[A-Za-z]{2,}$/;
+  if(!RE.test(mail)){toast(t('contact_bad_mail'));return;}
   if(!msg){toast(t('contact_empty'));return;}
-  var body=encodeURIComponent(msg+'\n\n— '+(name||''));
-  var subj=encodeURIComponent('رسالة من موقع القرآن الكريم');
-  window.location.href='mailto:info@qurankarem.org?subject='+subj+'&body='+body;
+  if(msg.length<10){toast(t('contact_short'));return;}
+  if(btn){btn.disabled=true;}
+  toast(t('contact_sending'));
+  fetch('https://contact.007.gallery/send',{
+    method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({email:mail,subject:'رسالة من موقع القرآن الكريم',
+      message:msg+'\n\n— '+(name||'—'),_trap:'',elapsed:Date.now()-_ctLoaded})
+  }).then(function(r){return r.json().catch(function(){return {ok:false};});})
+   .then(function(d){
+     if(btn){btn.disabled=false;}
+     if(d&&d.ok){
+       toast(t('contact_ok'));
+       ['ct-mail','ct-name','ct-msg'].forEach(function(id){var e=document.getElementById(id);if(e){e.value='';}});
+     } else {toast(t('contact_fail'));}
+   }).catch(function(){if(btn){btn.disabled=false;}toast(t('contact_fail'));});
 }
 
 // ===== خط المصحف القابل للتبديل =====
