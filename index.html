@@ -958,6 +958,9 @@ input[type=range].tp-rng{width:100%;accent-color:var(--gold-500);cursor:pointer;
 .ct-lbl{display:block;font-size:.68rem;color:var(--text-muted);letter-spacing:.08em;margin:14px 0 6px}
 .ct-inp{width:100%;background:rgba(5,12,26,.85);border:1px solid rgba(201,169,110,0.16);border-radius:12px;color:var(--text-primary);padding:12px 14px;font-family:inherit;font-size:.86rem;resize:vertical}
 .ct-inp:focus{outline:none;border-color:var(--gold-500)}
+.ct-status{margin-top:12px;padding:11px 14px;border-radius:12px;font-size:.78rem;line-height:1.8;text-align:center;border:1px solid rgba(201,169,110,0.28);background:rgba(201,169,110,0.07);color:var(--gold-200)}
+.ct-status[data-kind="ok"]{border-color:rgba(90,170,120,0.45);color:#3f7d56}
+.ct-status[data-kind="err"]{border-color:rgba(200,90,90,0.45);color:#b3574f}
 .ct-note{font-size:.68rem;color:var(--text-dim);margin-top:10px;text-align:center}
 .lic-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:50px;background:rgba(95,208,138,0.1);border:1px solid rgba(95,208,138,0.28);color:#7fe0a2;font-size:.78rem;margin-bottom:18px}
 .lic-p{font-size:.9rem;color:var(--ivory-200);margin-bottom:14px}
@@ -1528,11 +1531,21 @@ input[type=range].tp-rng{width:100%;accent-color:var(--gold-500);cursor:pointer;
         <div style="margin-top:18px">
           <label class="ct-lbl" data-i18n="contact_mail">بريدك الإلكتروني</label>
           <input class="ct-inp" id="ct-mail" type="email" inputmode="email" autocomplete="email" dir="ltr" placeholder="—">
+          <label class="ct-lbl" data-i18n="contact_subj">الموضوع</label>
+          <select class="ct-inp" id="ct-subj">
+            <option value="suggest" data-i18n="subj_suggest">توصيات</option>
+            <option value="bug" data-i18n="subj_bug">إبلاغ عن خطأ</option>
+            <option value="thanks" data-i18n="subj_thanks">شكر</option>
+            <option value="idea" data-i18n="subj_idea">مقترحات</option>
+            <option value="ads" data-i18n="subj_ads">الإعلان</option>
+            <option value="other" data-i18n="subj_other">أخرى</option>
+          </select>
           <label class="ct-lbl" data-i18n="contact_name">الاسم</label>
           <input class="ct-inp" id="ct-name" placeholder="—">
           <label class="ct-lbl" data-i18n="contact_msg">رسالتك</label>
           <textarea class="ct-inp" id="ct-msg" rows="5" placeholder="—"></textarea>
           <button class="qibla-btn" style="margin-top:14px;width:100%;justify-content:center" onclick="sendContact()"><i class="fas fa-paper-plane"></i><span data-i18n="contact_send">إرسال</span></button>
+          <div class="ct-status" id="ct-status" hidden></div>
           <div class="ct-note" data-i18n="contact_note">تُرسل رسالتك من هنا مباشرةً — لا يُفتح أي تطبيق بريد.</div>
         </div>
       </div>
@@ -1679,9 +1692,7 @@ input[type=range].tp-rng{width:100%;accent-color:var(--gold-500);cursor:pointer;
         <div class="adv-price">
           <div class="adv-price-t" data-i18n="adv_price">الكلفة</div>
           <p class="lic-p" style="margin:0" data-i18n="adv_price_d">لا جدول أسعار ثابتاً. تواصل معنا ونتفق بما يليق بالمشروع وبك — وقد نقبل الدعم العيني (خدمة أو استضافة) بدل المال.</p>
-          <a class="qibla-btn" style="margin-top:14px;justify-content:center;text-decoration:none"
-             href="mailto:info@qurankarem.org?subject=%D8%A7%D9%84%D8%A5%D8%B9%D9%84%D8%A7%D9%86%20%D9%81%D9%8A%20QuranKarem.org">
-            <i class="fas fa-paper-plane"></i><span data-i18n="adv_contact">راسلنا للاتفاق</span></a>
+          <button class="qibla-btn" style="margin-top:14px;justify-content:center" onclick="contactAds()"><i class="fas fa-paper-plane"></i><span data-i18n="adv_contact">راسلنا للاتفاق</span></button>
         </div>
       </div>
     </div>
@@ -1749,6 +1760,6 @@ input[type=range].tp-rng{width:100%;accent-color:var(--gold-500);cursor:pointer;
   </div>
 </footer>
 
-<script src="/app.js?v=66"></script>
+<script src="/app.js?v=67"></script>
 </body>
 </html>

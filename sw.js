@@ -3,11 +3,11 @@
    الفنان الطيب عامر  ·  https://qurankarem.org
    Protected by ALTAYEB GUARDIAN v4.0
    GUARDIAN:END */
-// QuranKarem Service Worker — v66
+// QuranKarem Service Worker — v67
 // استراتيجية: Network-First لملفات الموقع (HTML/JS) حتى تظهر التحديثات فوراً،
 // وCache-First لمكتبات CDN والخطوط والصوت لتوفير الباندويدث والعمل بلا اتصال.
-const CACHE = 'qurankarem-v66';
-const CORE = ['/', '/index.html', '/app.js?v=66', '/manifest.json', '/guardian.js?v=1', '/icon-192.png', '/icon-512.png'];
+const CACHE = 'qurankarem-v67';
+const CORE = ['/', '/index.html', '/app.js?v=67', '/manifest.json', '/guardian.js?v=1', '/icon-192.png', '/icon-512.png'];
 
 // التثبيت — خزّن النواة ثم تولَّ التحكم فوراً
 self.addEventListener('install', (e) => {
