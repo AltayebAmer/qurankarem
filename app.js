@@ -111,7 +111,7 @@ var T = {
   contact_name:"الاسم",
   contact_msg:"رسالتك",
   contact_send:"إرسال",
-  contact_note:"تُرسل رسالتك من هنا مباشرةً — لا يُفتح أي تطبيق بريد.",contact_mail:"بريدك الإلكتروني",contact_subj:"الموضوع",subj_suggest:"توصيات",subj_bug:"إبلاغ عن خطأ",subj_thanks:"شكر",subj_idea:"مقترحات",subj_ads:"الإعلان",subj_other:"أخرى",contact_bad_mail:"تحقّق من بريدك الإلكتروني",contact_short:"الرسالة قصيرة جداً — اكتب عشرة أحرف على الأقل",contact_sending:"جارٍ الإرسال…",contact_ok:"وصلت رسالتك — بارك الله فيك",contact_fail:"تعذّر الإرسال، أعد المحاولة",
+  contact_note:"تُرسل رسالتك من هنا مباشرةً — لا يُفتح أي تطبيق بريد.",contact_mail:"بريدك الإلكتروني",contact_subj:"الموضوع",nav_works:"مشاريع أخرى",works_title:"من تصميم الطيب عامر",works_sub:"مشاريع رقمية مجانية — وغيرها قادم",works_note:"كل مشروع صُمِّم ليكون مجانياً ونافعاً. شاركه مع من ينتفع به.",share_read:"اقرأ القرآن الكريم كاملاً — مجاناً وبلا إعلانات مزعجة",share_listen:"استمع إلى القرآن بأصوات كبار القراء",share_teach:"تعلّم القرآن وتدبّره",share_kids:"ركن الأطفال — القرآن بأسلوب محبّب",share_prayer:"أوقات الصلاة واتجاه القبلة",share_here:"شارك هذه الصفحة",subj_suggest:"توصيات",subj_bug:"إبلاغ عن خطأ",subj_thanks:"شكر",subj_idea:"مقترحات",subj_ads:"الإعلان",subj_other:"أخرى",contact_bad_mail:"تحقّق من بريدك الإلكتروني",contact_short:"الرسالة قصيرة جداً — اكتب عشرة أحرف على الأقل",contact_sending:"جارٍ الإرسال…",contact_ok:"وصلت رسالتك — بارك الله فيك",contact_fail:"تعذّر الإرسال، أعد المحاولة",
   contact_empty:"اكتب رسالتك أولاً",
   designer:"تصميم وفكرة",
   license_title:"الملكية الفكرية",
@@ -260,7 +260,7 @@ var T = {
   contact_name:"Name",
   contact_msg:"Your message",
   contact_send:"Send",
-  contact_note:"Your message is sent from here — no mail app opens.",contact_mail:"Your email",contact_subj:"Subject",subj_suggest:"Recommendation",subj_bug:"Bug report",subj_thanks:"Thanks",subj_idea:"Suggestion",subj_ads:"Advertising",subj_other:"Other",contact_bad_mail:"Please check your email address",contact_short:"That message is too short — at least ten characters",contact_sending:"Sending…",contact_ok:"Your message arrived — thank you",contact_fail:"Sending failed, please try again",
+  contact_note:"Your message is sent from here — no mail app opens.",contact_mail:"Your email",contact_subj:"Subject",nav_works:"Other projects",works_title:"Designed by Altayeb Amer",works_sub:"Free digital projects — and more to come",works_note:"Each project is built to be free and useful. Share it with someone who would benefit.",share_read:"Read the whole Quran — free, with no intrusive ads",share_listen:"Listen to the Quran recited by great reciters",share_teach:"Learn and reflect on the Quran",share_kids:"Kids corner — the Quran made lovable",share_prayer:"Prayer times and qibla direction",share_here:"Share this page",subj_suggest:"Recommendation",subj_bug:"Bug report",subj_thanks:"Thanks",subj_idea:"Suggestion",subj_ads:"Advertising",subj_other:"Other",contact_bad_mail:"Please check your email address",contact_short:"That message is too short — at least ten characters",contact_sending:"Sending…",contact_ok:"Your message arrived — thank you",contact_fail:"Sending failed, please try again",
   contact_empty:"Write your message first",
   designer:"Design & concept",
   license_title:"Intellectual Property",
@@ -409,7 +409,7 @@ var T = {
   contact_name:"Nom",
   contact_msg:"Votre message",
   contact_send:"Envoyer",
-  contact_note:"Votre message part d’ici — aucune messagerie ne s’ouvre.",contact_mail:"Votre e-mail",contact_subj:"Objet",subj_suggest:"Recommandation",subj_bug:"Signaler un bug",subj_thanks:"Remerciement",subj_idea:"Suggestion",subj_ads:"Publicité",subj_other:"Autre",contact_bad_mail:"Vérifiez votre adresse e-mail",contact_short:"Message trop court — au moins dix caractères",contact_sending:"Envoi…",contact_ok:"Votre message est arrivé — merci",contact_fail:"Échec de l’envoi, réessayez",
+  contact_note:"Votre message part d’ici — aucune messagerie ne s’ouvre.",contact_mail:"Votre e-mail",contact_subj:"Objet",nav_works:"Autres projets",works_title:"Conçu par Altayeb Amer",works_sub:"Projets numériques gratuits — et d’autres à venir",works_note:"Chaque projet est conçu pour être gratuit et utile. Partagez-le.",share_read:"Lisez le Coran en entier — gratuitement",share_listen:"Écoutez le Coran par de grands récitants",share_teach:"Apprenez et méditez le Coran",share_kids:"Coin des enfants",share_prayer:"Heures de prière et direction de la qibla",share_here:"Partager cette page",subj_suggest:"Recommandation",subj_bug:"Signaler un bug",subj_thanks:"Remerciement",subj_idea:"Suggestion",subj_ads:"Publicité",subj_other:"Autre",contact_bad_mail:"Vérifiez votre adresse e-mail",contact_short:"Message trop court — au moins dix caractères",contact_sending:"Envoi…",contact_ok:"Votre message est arrivé — merci",contact_fail:"Échec de l’envoi, réessayez",
   contact_empty:"Écrivez d’abord votre message",
   designer:"Conception & idée",
   license_title:"Propriété intellectuelle",
@@ -558,7 +558,7 @@ var T = {
   contact_name:"Nombre",
   contact_msg:"Tu mensaje",
   contact_send:"Enviar",
-  contact_note:"Tu mensaje se envía desde aquí — no se abre ninguna aplicación.",contact_mail:"Tu correo",contact_subj:"Asunto",subj_suggest:"Recomendación",subj_bug:"Informar de un error",subj_thanks:"Agradecimiento",subj_idea:"Sugerencia",subj_ads:"Publicidad",subj_other:"Otro",contact_bad_mail:"Revisa tu dirección de correo",contact_short:"El mensaje es muy corto — al menos diez caracteres",contact_sending:"Enviando…",contact_ok:"Tu mensaje llegó — gracias",contact_fail:"No se pudo enviar, inténtalo de nuevo",
+  contact_note:"Tu mensaje se envía desde aquí — no se abre ninguna aplicación.",contact_mail:"Tu correo",contact_subj:"Asunto",nav_works:"Otros proyectos",works_title:"Diseñado por Altayeb Amer",works_sub:"Proyectos digitales gratuitos — y más por venir",works_note:"Cada proyecto es gratuito y útil. Compártelo con quien pueda beneficiarse.",share_read:"Lee el Corán completo — gratis",share_listen:"Escucha el Corán con grandes recitadores",share_teach:"Aprende y reflexiona sobre el Corán",share_kids:"Rincón infantil",share_prayer:"Horarios de oración y dirección de la alquibla",share_here:"Compartir esta página",subj_suggest:"Recomendación",subj_bug:"Informar de un error",subj_thanks:"Agradecimiento",subj_idea:"Sugerencia",subj_ads:"Publicidad",subj_other:"Otro",contact_bad_mail:"Revisa tu dirección de correo",contact_short:"El mensaje es muy corto — al menos diez caracteres",contact_sending:"Enviando…",contact_ok:"Tu mensaje llegó — gracias",contact_fail:"No se pudo enviar, inténtalo de nuevo",
   contact_empty:"Escribe tu mensaje primero",
   designer:"Diseño e idea",
   license_title:"Propiedad intelectual",
@@ -2677,8 +2677,9 @@ function nudgeAction(){
 // المشاركة: Web Share على الجوال، أو نسخ الرابط على غيره
 function shareSite(){return shareVia('native');}
 function shareVia(platform){
-  var url='https://qurankarem.org'+(location.pathname==='/'?'/':location.pathname);
-  var txt=t('share_text');
+  var pg=(window.S&&S.page)||'home';
+  var url='https://qurankarem.org/'+(pg&&pg!=='home'?'#'+pg:'');
+  var txt=(pg&&pg!=='home'&&t('share_'+pg)!=='share_'+pg)?t('share_'+pg):t('share_text');
   var enc=encodeURIComponent, u=enc(url), tx=enc(txt+' — '+url);
   if(platform==='whatsapp'){window.open('https://wa.me/?text='+tx,'_blank');return;}
   if(platform==='telegram'){window.open('https://t.me/share/url?url='+u+'&text='+enc(txt),'_blank');return;}
