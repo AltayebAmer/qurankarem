@@ -739,7 +739,8 @@ footer{border-top:1px solid rgba(201,169,110,0.07);padding:34px 20px 22px;backgr
 [data-theme="light"] .wk-art .wk-h{color:#4a4258}
 [data-theme="light"] .wk-art .wk-card b{color:#3c3450}
 
-.wk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.wk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:600px){.wk-grid{grid-template-columns:1fr}}
 .wk-card{display:flex;flex-direction:column;gap:3px;align-items:center;text-align:center;padding:15px 12px;
   border:1px solid rgba(201,169,110,0.22);border-radius:14px;text-decoration:none;transition:border-color .25s,background .25s}
 .wk-card:hover{border-color:var(--gold-500);background:rgba(201,169,110,0.06)}
@@ -1831,6 +1832,6 @@ input[type=range].tp-rng{width:100%;accent-color:var(--gold-500);cursor:pointer;
   </div>
 </footer>
 
-<script src="/app.js?v=70"></script>
+<script src="/app.js?v=71"></script>
 </body>
 </html>
